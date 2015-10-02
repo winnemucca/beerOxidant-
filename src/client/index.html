@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Untitled</title>
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="src/client/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
   </head>
   <body>
     
@@ -13,12 +13,18 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    <script src="src/client/app/app.module.js"></script>
-    <!-- <script src="src/client/app/features/dashboard/dashboard.module.js"></script>
+    <!-- modules -->
+    <script src="app/app.module.js"></script>
+    <script src="app/features/dashboard/dashboard.module.js"></script>
+    <script src="app/features/beerStyle/beerStyle.module.js"></script>
 
+    <script src="app/features/features.module.js"></script>
 
-    <script src="/src/client/app/features/dashboard/dashboard.controller.js"></script>
-    <script src="/src/client/app/features/dashboard/dashboard.route.js"></script> -->
+    <!-- routes and controllers -->
+    <script src="app/features/dashboard/dashboard.controller.js"></script>
+    <script src="app/features/dashboard/dashboard.route.js"></script>
+    <script src="app/features/beerStyle/beerStyle.controller.js"></script>
+    <script src="app/features/beerStyle/beerStyle.route.js"></script>
 
   </body>
 </html>

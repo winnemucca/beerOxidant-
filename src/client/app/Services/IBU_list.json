@@ -1,0 +1,320 @@
+[
+  {
+    "id" : "1",
+    "BeerStyle": "Altbier Hybrid*",
+    "IBU": "24-30",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "2",
+    "BeerStyle": "American Dark Lager",
+    "IBU": "14-20",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "3",
+    "BeerStyle": "American Lager",
+    "IBU": "5-15",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "4",
+    "BeerStyle": "American Light Lager",
+    "IBU": "8-17",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "5",
+    "BeerStyle": "American Premium Lager",
+    "IBU": "13-23",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "6",
+    "BeerStyle": "American Wheat",
+    "IBU": "10-17",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "7",
+    "BeerStyle": "Barley Wine",
+    "IBU": "50-100",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "8",
+    "BeerStyle": "Belgian Brown Ale",
+    "IBU": "15-25",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "9",
+    "BeerStyle": "Belgian Dubbel",
+    "IBU": "10-25",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "10",
+    "BeerStyle": "Belgian Tripels",
+    "IBU": "14-25",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "11",
+    "BeerStyle": "Berliner Weisse",
+    "IBU": "3-6",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "12",
+    "BeerStyle": "Bitter",
+    "IBU": "Extra Special",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "13",
+    "BeerStyle": "Bitter",
+    "IBU": "Ordinary",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "14",
+    "BeerStyle": "Bock Lager",
+    "IBU": "25-28",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "15",
+    "BeerStyle": "Bock",
+    "IBU": "German Lager",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "16",
+    "BeerStyle": "Bock",
+    "IBU": "Helles (Pale) Lager",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "17",
+    "BeerStyle": "Brown Ale",
+    "IBU": "15-20",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "18",
+    "BeerStyle": "Brown Ale American",
+    "IBU": "25-60",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "19",
+    "BeerStyle": "Brown Ale",
+    "IBU": "English",
+    "list" : {"drinks": []}
+  },
+  {
+    "id" : "20",
+    "BeerStyle": "California Common",
+    "IBU": "33-45"
+  },
+  {
+    "id" : "21",
+    "BeerStyle": "Cream Ale Hybrid",
+    "IBU": "10-18"
+  },
+  {
+    "id" : "22",
+    "BeerStyle": "Dopplebock Lager",
+    "IBU": "17-27"
+  },
+  {
+    "id" : "23",
+    "BeerStyle": "Dortmunder/Export Lager",
+    "IBU": "23-29"
+  },
+  {
+    "id" : "25",
+    "BeerStyle": "Dunkel Lager",
+    "IBU": "16-25"
+  },
+  {
+    "id" : "26",
+    "BeerStyle": "English Mild",
+    "IBU": "14-20"
+  },
+  {
+    "id" : "27",
+    "BeerStyle": "English Old/Strong Ale",
+    "IBU": "30-40"
+  },
+  {
+    "id" : "28",
+    "BeerStyle": "Fruit Beer Hybrid",
+    "IBU": "Varies"
+  },
+  {
+    "id" : "29",
+    "BeerStyle": "German Hefeweizen",
+    "IBU": "10-16"
+  },
+  {
+    "id" : "30",
+    "BeerStyle": "Herb and Spice Beer",
+    "IBU": "Varies"
+  },
+  {
+    "id" : "31",
+    "BeerStyle": "Imperial Stout",
+    "IBU": "50-80"
+  },
+  {
+    "id" : "32",
+    "BeerStyle": "India Pale Ale (IPA)",
+    "IBU": "40-60"
+  },
+  {
+    "id" : "33",
+    "BeerStyle": "Kolsch Hybrid",
+    "IBU": "20-30"
+  },
+  {
+    "id" : "34",
+    "BeerStyle": "Lambics",
+    "IBU": "11-23"
+  },
+  {
+    "id" : "35",
+    "BeerStyle": "Light Ale",
+    "IBU": "10-15"
+  },
+  {
+    "id" : "36",
+    "BeerStyle": "Marzen/Octoberfest Lager",
+    "IBU": "22-28"
+  },
+  {
+    "id" : "37",
+    "BeerStyle": "Munich Dunkel Lager",
+    "IBU": "14-24"
+  },
+  {
+    "id" : "38",
+    "BeerStyle": "Munich Helles Lager",
+    "IBU": "18-25"
+  },
+  {
+    "id" : "39",
+    "BeerStyle": "Pale Ale American",
+    "IBU": "20-40"
+  },
+  {
+    "id" : "40",
+    "BeerStyle": "Pale Ale Classic",
+    "IBU": "20-40"
+  },
+  {
+    "id" : "41",
+    "BeerStyle": "Pale Ale English",
+    "IBU": "20-40"
+  },
+  {
+    "id" : "42",
+    "BeerStyle": "Pilsner Classic Lager",
+    "IBU": "35-45"
+  },
+  {
+    "id" : "43",
+    "BeerStyle": "Pilsner Czech Lager",
+    "IBU": "35-43"
+  },
+  {
+    "BeerStyle": "Pilsner German Lager",
+    "IBU": "30-40"
+  },
+  {
+    "id" : "43",
+    "BeerStyle": "Porter",
+    "IBU": "20-60"
+  },
+  {
+    "id" : "44",
+    "BeerStyle": "Porter Robust",
+    "IBU": "25-40"
+  },
+  {
+    "id" : "45",
+    "BeerStyle": "Rauchbier",
+    "IBU": "20-25"
+  },
+  {
+    "id" : "46",
+    "BeerStyle": "Saison",
+    "IBU": "20-30"
+  },
+  {
+    "id" : "47",
+    "BeerStyle": "Scotch Strong Ale",
+    "IBU": "25-35"
+  },
+  {
+    "id" : "48",
+    "BeerStyle": "Scottish Brown",
+    "IBU": "5-20"
+  },
+  {
+    "id" : "49",
+    "BeerStyle": "Scottish Export",
+    "IBU": "15-20"
+  },
+  {
+    "id" : "50",
+    "BeerStyle": "Scottish Heavy",
+    "IBU": 0
+  },
+  {
+    "id" : "51",
+    "BeerStyle": 12.17,
+    "IBU": 0
+  },
+  {
+    "id" : "52",
+    "BeerStyle": "Scottish Light Ale",
+    "IBU": 0
+  },
+  {
+    "id" : "53",
+    "BeerStyle": "10-15",
+    "IBU": 0
+  },
+  {
+    "id" : "54",
+    "BeerStyle": "Smoked Beer",
+    "IBU": "20-30"
+  },
+  {
+    "id" : "55",
+    "BeerStyle": "Stout Dry",
+    "IBU": "30-35"
+  },
+  {
+    "id" : "56",
+    "BeerStyle": "Stout Sweet (Cream)",
+    "IBU": "15-25"
+  },
+  {
+    "id" : "57",
+    "BeerStyle": "Vienna Lager",
+    "IBU": "18-25"
+  },
+  {
+    "id" : "58",
+    "BeerStyle": "Weizenbock",
+    "IBU": "10-20"
+  },
+  {
+    "id" : "59",
+    "BeerStyle": "Weizen",
+    "IBU": "13-17"
+  }
+]
