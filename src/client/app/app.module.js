@@ -1,5 +1,5 @@
 (function() {
 	'use strict';
 
-	angular.module('beerApp',['ui.router', 'beerApp.features']);
+	angular.module('beerApp',['ui.router', 'beerApp.features', 'beerApp.services']);
 })();

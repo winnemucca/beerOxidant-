@@ -5,8 +5,12 @@
 
 		function beerListFactory($http, $log) {
 
+			return {
+				getBeerList: getBeerList
+			}
+
 			function getBeerList(){
-				var url = './Services/IBU_list.json';
+				var url = './app/Services/IBU_list.json';
 
 				return $http.get(url, {catch: true})
 					.then(getBeerListComplete)
