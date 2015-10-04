@@ -1,3 +1,13 @@
 body {
-	background: #FCB22E;
+	background: #168CCC;
+	color: #fff;
+}
+
+#section2 {
+	background: #fff;
+	color: #168CCC;
+}
+
+.measuringCup img {
+	width: 50%;
 }
