@@ -8,16 +8,18 @@
 		function config($stateProvider) {
 			
 			$stateProvider
-				.state('beerInfo:beerId', {
-					url:'/beerInfo',
+				.state('beerInfo', {
+					url:'/beerInfo:beerId',
 					templateUrl: './app/features/beerInfo/beerInfo.html',
 					controller: 'BeerController',
 					controllerAs: 'vm',
-					beerInfo: beerInfo
+					resolve: {
+						beerLocker: beerLocker
+					}
 				})
 		} 
 
-		function beerInfo( beerListFactory, $stateParams) {
+		function beerLocker( beerListFactory, $stateParams) {
 			return beerListFactory.getBeer($stateParams.beerId);
 		}
 })();

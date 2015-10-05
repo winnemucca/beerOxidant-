@@ -18,7 +18,6 @@
 					.catch(getBeerListFailed);
 
 					function getBeerListComplete(response) {
-						console.log(response.data);
 
 						return response.data;
 					}
@@ -35,10 +34,12 @@
 				})
 				.then(function(response) {
 					console.log('promise', id);
+					console.log('response', response.data.length);
 					var data = response.data;
 					for(var i =0, len=data.length;i<len;i++) {
-                   
-	                    if(data[i].id === parseInt(id)) {
+                   		console.log(typeof data[i].id)
+	                    if(data[i].id == parseInt(id)) {
+	                    	console.log('data i',data[i]);
 	                        return data[i];
 	                    }
                 	}
