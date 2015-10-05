@@ -11,6 +11,11 @@
 			console.log('beer list', beerListFactory.getBeerList());
 			var vm = this;
 			vm.beerList = [];
+			vm.sortBy = 'id';
+			vm.reverse = true;
+			vm.doSort = doSort;
+			vm.isMatchedAgainstSearch = isMatchedAgainstSearch;
+
 
 			activate();
 
@@ -27,6 +32,21 @@
 					return vm.beerList;
 				})
 			}
-		}
+
+			function isMatchedAgainstSearch(beer) {
+					console.log('user',user);
+				return vm.beerFilter == 0 || beer.id.indexOf(vm.beerFilter) >=0;
+			}
+
+			function doSort(propName) {
+				console.log(propName);
+				vm.sortBy=propName;
+                vm.reverse=!vm.reverse
+			}
+
+			function sortNumbers(a,b) {
+				return  a - b;
+			}
+		} // end of controller
 
 })();

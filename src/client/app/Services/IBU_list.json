@@ -229,91 +229,92 @@
     "IBU": "35-43"
   },
   {
+    "id": "44",
     "BeerStyle": "Pilsner German Lager",
     "IBU": "30-40"
   },
   {
-    "id" : "43",
+    "id" : "45",
     "BeerStyle": "Porter",
     "IBU": "20-60"
   },
   {
-    "id" : "44",
+    "id" : "46",
     "BeerStyle": "Porter Robust",
     "IBU": "25-40"
   },
   {
-    "id" : "45",
+    "id" : "47",
     "BeerStyle": "Rauchbier",
     "IBU": "20-25"
   },
   {
-    "id" : "46",
+    "id" : "48",
     "BeerStyle": "Saison",
     "IBU": "20-30"
   },
   {
-    "id" : "47",
+    "id" : "49",
     "BeerStyle": "Scotch Strong Ale",
     "IBU": "25-35"
   },
   {
-    "id" : "48",
+    "id" : "50",
     "BeerStyle": "Scottish Brown",
     "IBU": "5-20"
   },
   {
-    "id" : "49",
+    "id" : "51",
     "BeerStyle": "Scottish Export",
     "IBU": "15-20"
   },
   {
-    "id" : "50",
-    "BeerStyle": "Scottish Heavy",
-    "IBU": 0
-  },
-  {
-    "id" : "51",
-    "BeerStyle": 12.17,
-    "IBU": 0
-  },
-  {
     "id" : "52",
-    "BeerStyle": "Scottish Light Ale",
-    "IBU": 0
+    "BeerStyle": "Scottish Heavy",
+    "IBU": "0"
   },
   {
     "id" : "53",
-    "BeerStyle": "10-15",
-    "IBU": 0
+    "BeerStyle": "12.17",
+    "IBU": "0"
   },
   {
     "id" : "54",
+    "BeerStyle": "Scottish Light Ale",
+    "IBU": "0"
+  },
+  {
+    "id" : "55",
+    "BeerStyle": "10-15",
+    "IBU": "0"
+  },
+  {
+    "id" : "56",
     "BeerStyle": "Smoked Beer",
     "IBU": "20-30"
   },
   {
-    "id" : "55",
+    "id" : "57",
     "BeerStyle": "Stout Dry",
     "IBU": "30-35"
   },
   {
-    "id" : "56",
+    "id" : "58",
     "BeerStyle": "Stout Sweet (Cream)",
     "IBU": "15-25"
   },
   {
-    "id" : "57",
+    "id" : "59",
     "BeerStyle": "Vienna Lager",
     "IBU": "18-25"
   },
   {
-    "id" : "58",
+    "id" : "60",
     "BeerStyle": "Weizenbock",
     "IBU": "10-20"
   },
   {
-    "id" : "59",
+    "id" : "61",
     "BeerStyle": "Weizen",
     "IBU": "13-17"
   }

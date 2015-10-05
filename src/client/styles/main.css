@@ -15,3 +15,46 @@ body {
 .panel {
 	color: #168CCC;
 }
+
+.repeat-animation {
+  -webkit-transition:0.2s linear all;
+  transition:0.2s linear all;
+  position:relative;
+  left:50px;
+}
+
+
+.repeat-animation.ng-enter-stagger {
+  -webkit-transition-delay:0.05s;
+  transition-delay:0.05s;
+  -webkit-transition-duration:0;
+  transition-duration:0;
+}
+.repeat-animation.ng-enter { opacity:0; }
+.repeat-animation.left.ng-enter { left:0px; }
+.repeat-animation.right.ng-enter { left:100px; }
+.repeat-animation.ng-enter-active { opacity:1; left:50px; }
+
+
+
+.focus-animation {
+  background:#eee;
+}
+
+.focus-animation.on-add,
+.focus-animation.on-remove {
+  -webkit-transition:0.1s linear all;
+  transition:0.1s linear all;
+}
+
+.focus-animation.on {
+  background:red;
+}
+
+.focus-animation.on-add-stagger,
+.focus-animation.on-remove-stagger {
+  -webkit-transition-delay:0.03s;
+  transition-delay:0.03s;
+  -webkit-transition-duration:0;
+  transition-duration:0;
+}

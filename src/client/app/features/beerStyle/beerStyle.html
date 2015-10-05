@@ -7,29 +7,24 @@
     </div>
 
     <div class="panel-body">
-      Filter: <input type="text" />
+      Filter: <input type="text" ng-model="beerFilter" />
     </div>
 
     <table class="table table-striped table-responsive">
       <tr>
-      <!--   <th ng-click="ctrl.doSort('name')">Name</th>
-        <th ng-click="ctrl.doSort('city')">City</th>
-        <th ng-click="ctrl.doSort('orderTotal')">order total</th>
-        <th ng-click="ctrl.doSort('joined')">joined</th>
-        <th>&nbsp;</th> -->
-        <th>ID <i class="fa fa-sort"></i> </th>
-        <th>Beer Style <i class="fa fa-sort"></i></th>
-        <th>IBU <i class="fa fa-sort"></i></th>
+        <!-- <th ng-click="ctrl.doSort('name')">Name</th> -->
+        
+        <!-- <th>&nbsp;</th> -->
+        <th ng-click="vm.doSort('id')">ID <i class="fa fa-sort"></i> </th>
+        <th ng-click="vm.doSort('BeerStyle')">Beer Style <i class="fa fa-sort"></i></th>
+        <th ng-click="vm.doSort('IBU')">IBU <i class="fa fa-sort"></i></th>
         <th>Total Drinks <i class="fa fa-sort"></i></th>
-
-       
-
       </tr>
 
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+      <tr class = "repeat-animation focus animation" data-ng-repeat = "beer in vm.beerList | filter: beerFilter | orderBy:vm.sortBy:vm.reverse" ng-class="{on:vm.isMatchAgainstSearch(beer)}" ng-class-odd="'right'" ng-class-even="'left'">
+        <td>{{beer.id}}</td>
+        <td>{{beer.BeerStyle}} </td>
+        <td>{{beer.IBU}}</td>
         <td></td>
       </tr>
 
