@@ -3,10 +3,12 @@
 
 	angular
 		.module('beerApp.features.beerInfo')
-		.controller('HomeController', BeerController);
+		.controller('BeerController', BeerController);
 
-		function BeerController() {
-			console.log('beer page');
+		function BeerController($stateParams, beerInfo) {
+			console.log('beerInfo', beerInfo);
+			console.log('beerInfo', $stateParams);
+
 			var vm = this;
 		}
 

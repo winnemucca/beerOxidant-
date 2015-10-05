@@ -6,7 +6,8 @@
 		function beerListFactory($http, $log) {
 
 			return {
-				getBeerList: getBeerList
+				getBeerList: getBeerList,
+				getBeer: getBeer
 			}
 
 			function getBeerList(){
@@ -26,5 +27,22 @@
 						console.log('error', error);
 					}
 			}
-		}
+
+			function getBeer(id) {
+				var url = './app/Services/IBU_list.json';
+				return $http.get(url, {
+					catch: true
+				})
+				.then(function(response) {
+					console.log('promise', id);
+					var data = response.data;
+					for(var i =0, len=data.length;i<len;i++) {
+                   
+	                    if(data[i].id === parseInt(id)) {
+	                        return data[i];
+	                    }
+                	}
+				})
+			}
+		} // end of function
 })();
