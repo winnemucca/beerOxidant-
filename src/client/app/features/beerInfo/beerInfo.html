@@ -10,11 +10,31 @@
 			</tr>
 
 			<tr>
-				<td>{{vm.BeerStyle}}</td>
 				<td>{{vm.IBU}}</td>
+				<td>{{vm.list}}</td>
+				<td >
+					<button 
+						data-template-url="app/components/modal.html"class="btm btn-primary" 
+						data-animation="am-fade-and-slide-top"
+						bs-modal="modal"> 
+						Add Beer to locker
+					</button> 
+				</td>
+
 			</tr>
 		</table>	
 		<pre></pre>
 	</div>
+
+	<!-- <i 
+	class="fa fa-info-circle" 
+	bs-aside 
+	data-template-url="app/components/aside.html" 
+	data-container="body" 
+	ng-class="greetingInfoClass" 
+	ng-mouseover="greetingInfoClass='text-primary fa-lg cursor-pointer'" 
+	ng-mouseleave="greetingInfoClass='text-muted'"> 
+
+	</i> -->
 
 </div>

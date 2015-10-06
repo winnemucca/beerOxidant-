@@ -58,3 +58,32 @@ body {
   -webkit-transition-duration:0;
   transition-duration:0;
 }
+
+
+/*modal background*/
+
+
+
+
+.modal-backdrop.am-fade {
+    opacity: .7;
+    transition: opacity .35s linear;
+}
+.modal-backdrop.am-fade.ng-enter {
+    opacity: 0;
+}
+.modal-backdrop.am-fade.ng-enter.ng-enter-active {
+    opacity: .5;
+}
+
+.modal-backdrop.am-fade.ng-leave {
+    opacity: .5;
+}
+.modal-backdrop.am-fade.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+
+.cursor-pointer {
+  cursor: pointer;
+}
