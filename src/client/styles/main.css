@@ -16,6 +16,10 @@ body {
 	color: #168CCC;
 }
 
+.title {
+  text-align: center;
+}
+
 .repeat-animation {
   -webkit-transition:0.2s linear all;
   transition:0.2s linear all;

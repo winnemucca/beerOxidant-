@@ -20,8 +20,8 @@
 
 		function ModalController($modal, $log , $scope) {
 			var vm = this;
+			
 			vm.animationsEnabled = true;
-
 			vm.open = open;
 
 			function open() {
@@ -29,7 +29,7 @@
 					animation: vm.animationsEnabled,
 					templateUrl: 'app/components/modal/modal.html',
 					controller: ModalInstanceCtrl,
-					controllerAs: vm,
+					controllerAs: 'modal',
 					bindToController: true,
 					size: 'lg'
 					// resolve: {
@@ -49,16 +49,18 @@
 			function ModalInstanceCtrl( $scope,$modalInstance) {
 
 				var vm = this;
-			    $scope.ok = function () {
+			    vm.ok = ok; 
+			   	vm.cancel = cancel; 
+
+			    function ok () {
 	           		// console.log('beer', $scope.beer);
 	           		// console.log('IBU',$scope.IBU);
-
 	           		console.log('clicked');
 	               // $modalInstance.close($scope.selected.item);
-	               $modalInstance.close();
+	               	$modalInstance.close();
 	            };
 
-	           	$scope.cancel = function () {
+	           	function cancel() {
 	           		console.log('clicked');
 	               	$modalInstance.dismiss('cancel');
 	           	};
@@ -67,7 +69,10 @@
 
 	})(); // end of iffe statement function
 
-// *************** worked out an alternative way with link*********************
+
+
+
+// *************** worked out an alternative way with link*******************
 
 // 	(function() {
 // 	'use strict';
