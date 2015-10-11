@@ -5,6 +5,7 @@
     <title>Beer Informer</title>
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-motion/0.4.3/angular-motion.min.css">
     <!-- <link rel="stylesheet" href="/octicons/octicons.css"> -->
     <link rel="stylesheet" type="text/css" href="styles/main.css">
   </head>
@@ -20,13 +21,14 @@
     
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
-    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script> -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-animate.js"></script>
 
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.2/angular-strap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.2/angular-strap.tpl.min.js"></script>
+   
 
     <!-- modules -->
     <script src="app/app.module.js"></script>
@@ -34,9 +36,15 @@
     <script src="app/features/beerStyle/beerStyle.module.js"></script>
     <script src="app/features/home/home.module.js"></script>
     <script src="app/features/beerInfo/beerInfo.module.js"></script>
+    <script src="app/components/modal/modal.module.js"></script>
 
+
+    <script src="app/components/components.module.js"></script>
     <script src="app/features/features.module.js"></script>
     <script src="app/Services/services.module.js"></script>
+
+    <!-- directives -->
+    <script src="app/components/modal/modal.directive.js"></script>
 
 
     <!-- routes and controllers -->

@@ -3,79 +3,130 @@
 
 	angular
 		.module('app.components.modal')
-		.directive('myModal', myModal)
-
-		function myModal(){
-
-    return {
-
-        restrict: 'E',
-
-        // The modal callback specified in the directive tag
-        scope: {
-            onUpdate: '&?'
-        },
-
-        replace: true,
-
-        // This is the template for the directive, not the modal
-        templateUrl: 'modal.html',
-
-        controllerAs: 'ctrl',
-
-        bindToController: true,
-
-        compile: function (element, attrs) {
-
-            return function (scope, element, attrs) {
-
-            };
-        },
+		.directive('myModal', myModal);
+		
 
 
-        /*@ngInject*/
-        controller: function($scope, $log, $aside){
+		function myModal() {
+			return {
+				restrict: 'E',
+				scope: {},
+				template: "<button class='btn btn-danger' ng-click='vm.open()'>Beer </button>",
+				controller: ModalController,
+				controllerAs: 'vm',
+				bindToController: true
+			}
+		}
 
-            var vm = this;
+		function ModalController($modal, $log , $scope) {
+			var vm = this;
+			vm.animationsEnabled = true;
 
-            var myDialog = $aside({
+			vm.open = open;
 
-                // Dialog template
-                template: 'my-modal.template.html',
-                show: false,
-                animation: 'am-fade-and-slide-right',
-                placement: 'right',
-                backdrop: true,
-                html: true,
-                container: '',
-                scope: $scope
-            });
+			function open() {
+				var modalInstance = $modal.open({
+					animation: vm.animationsEnabled,
+					templateUrl: 'app/components/modal/modal.html',
+					controller: ModalInstanceCtrl,
+					controllerAs: vm,
+					bindToController: true,
+					size: 'lg'
+					// resolve: {
+					// 	title: function() {
+					// 		return 'training Info';
+					// 	}
+					// }			
+				});
+				modalInstance.result.then(function(selectedItem) {
+					console.log("Confirmed: "+ selectedItem);
+					$scope.selectedItem = selectedItem;
+				}, function() {
+					$log.info('modal dismissed at: ' + new Date());
+				});
+			};
 
+			function ModalInstanceCtrl( $scope,$modalInstance) {
 
-            // Opens modal
-            vm.ShowDialog = function(){
-                myDialog.$promise.then(function() {
-                    myDialog.show();
-                })
-            };
+				var vm = this;
+			    $scope.ok = function () {
+	           		// console.log('beer', $scope.beer);
+	           		// console.log('IBU',$scope.IBU);
 
+	           		console.log('clicked');
+	               // $modalInstance.close($scope.selected.item);
+	               $modalInstance.close();
+	            };
 
-            // Expose Update() method to the dialog template
-            $scope.Update = function(){
+	           	$scope.cancel = function () {
+	           		console.log('clicked');
+	               	$modalInstance.dismiss('cancel');
+	           	};
+			}
+		}
 
-                if(angular.isFunction(vm.onUpdate) ) {
+	})(); // end of iffe statement function
 
-                    vm.onUpdate()();
-                }
+// *************** worked out an alternative way with link*********************
 
-            }
+// 	(function() {
+// 	'use strict';
 
-        }
-    }
+// 	angular
+// 		.module('app.components.modal')
+// 		.directive('myModal', function($log, $modal) {
+//            return {
+//                restrict: 'E',
+//                // require: 'ngModel',
+//                template : "<button class='btn btn-danger' ng-click='open()'>Beer </button>",
+//                // replace: true,
+//                transclude: false,
+//                link: function ($scope, $rootScope, element, attrs) {
 
-}
+//                    	var ModalInstanceCtrl = function ($scope, $modalInstance) {
+ 
+//                        	$scope.beer = {beerName:""}
+//                        	console.log($scope.beer);
+                   
 
-})();
+//                        	$scope.ok = function () {
+//                        		console.log('beer', $scope.beer);
+//                        		// console.log('IBU',$scope.IBU);
 
+//                        		console.log('clicked');
+//                            // $modalInstance.close($scope.selected.item);
+//                            $modalInstance.close();
+//                        	};
 
+//                        	$scope.cancel = function () {
+//                        		console.log('clicked');
+//                            $modalInstance.dismiss('cancel');
+//                        	};
+//                    	}; //end of control
 
+//                    	// $scope.items = ['item1', 'item2', 'item3'];
+
+//                    	$scope.open = function () {
+
+//                        	var modalInstance = $modal.open({
+//                            templateUrl: 'app/components/modal/modal.html',
+//                            controller: ModalInstanceCtrl,
+//                            // resolve: {
+//                            //     items: function () {
+//                            //         return $scope.items;
+//                            //     }
+//                            // },
+//                            persist: true
+//                        	});
+
+//                        	modalInstance.result.then(function (selectedItem) {
+//                            $scope.selected = selectedItem;
+//                        	}, function () {
+//                            $log.info('Modal dismissed at: ' + new Date());
+//                        	});
+//                    }; //end of modal open
+//                } //end of link
+//            }; // end of return 
+//     	})    
+
+// })(); // end of iffe statement function

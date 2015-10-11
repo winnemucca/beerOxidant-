@@ -60,11 +60,22 @@ body {
 }
 
 
+.ng-valid       {  }
+.ng-invalid     {  }
+.ng-pristine    {  }
+.ng-dirty       {  }
+.ng-touched     {  }
+
+/* really specific css rules applied by angular */
+.ng-invalid-required        {  }
+.ng-invalid-minlength       {  }
+.ng-valid-max-length        {  }
+
 /*modal background*/
 
 
 
-
+/*
 .modal-backdrop.am-fade {
     opacity: .7;
     transition: opacity .35s linear;
@@ -81,7 +92,7 @@ body {
 }
 .modal-backdrop.am-fade.ng-leave.ng-leave-active {
     opacity: 0;
-}
+}*/
 
 
 .cursor-pointer {

@@ -1,5 +1,12 @@
 (function() {
 	'use strict';
 
-	angular.module('beerApp',['ui.router','ngAnimate', 'mgcrea.ngStrap','beerApp.features', 'beerApp.services']);
+	angular.module('beerApp',[
+		'ui.router',
+		'ngAnimate',
+		'ui.bootstrap',
+		'beerApp.features', 
+		'app.components',
+		'beerApp.services'
+	]);
 })();
