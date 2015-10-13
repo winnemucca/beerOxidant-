@@ -3,7 +3,10 @@
 		.module('beerApp.services.beerList',[])
 		.factory('beerListFactory', beerListFactory);
 
+		beerListFactory.$inject = ['$http', '$log'];
+
 		function beerListFactory($http, $log) {
+			var url = './app/Services/IBU_list.json';
 
 			return {
 				getBeerList: getBeerList,
@@ -11,7 +14,6 @@
 			}
 
 			function getBeerList(){
-				var url = './app/Services/IBU_list.json';
 
 				return $http.get(url, {catch: true})
 					.then(getBeerListComplete)
@@ -28,7 +30,6 @@
 			}
 
 			function getBeer(id) {
-				var url = './app/Services/IBU_list.json';
 				return $http.get(url, {
 					catch: true
 				})
@@ -45,5 +46,25 @@
                 	}
 				})
 			}
-		} // end of function
+
+			function addBeer() {
+				return $http.post(url,{
+			        data: JSON.stringify({application:app, from:d1, to:d2}),
+			        headers: {'Content-Type': 'application/json'}
+      			})
+
+				
+			}
+		} // end of beer Factory
 })();
+
+
+			// return $http.post(url,{
+			//     headers: { 'Content-Type': 'application/json' },
+			//     data: {application: app, from: d1, to: d2}
+			// });
+
+			// return $http.post(url,{
+		 //        data: JSON.stringify({application:app, from:d1, to:d2}),
+		 //        headers: {'Content-Type': 'application/json'}
+   //    		})

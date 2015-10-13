@@ -18,9 +18,10 @@
 			}
 		}
 
-		function ModalController($modal, $log , $scope) {
+		// ModalController.$inject = ['$modal'];
+		function ModalController($modal, $log , $scope, beerListFactory, $stateParams) {
 			var vm = this;
-			
+
 			vm.animationsEnabled = true;
 			vm.open = open;
 
@@ -29,7 +30,7 @@
 					animation: vm.animationsEnabled,
 					templateUrl: 'app/components/modal/modal.html',
 					controller: ModalInstanceCtrl,
-					controllerAs: 'modal',
+					controllerAs: 'vm',
 					bindToController: true,
 					size: 'lg'
 					// resolve: {
@@ -39,6 +40,8 @@
 					// }			
 				});
 				modalInstance.result.then(function(selectedItem) {
+					$log.info('beer in modal',beerListFactory.getBeer($stateParams.beerId) );
+
 					console.log("Confirmed: "+ selectedItem);
 					$scope.selectedItem = selectedItem;
 				}, function() {
@@ -51,16 +54,21 @@
 				var vm = this;
 			    vm.ok = ok; 
 			   	vm.cancel = cancel; 
+			   	vm.newBeer = {};
+			   	// vm.addBeer = function() {
+
+			   	// }
 
 			    function ok () {
-	           		// console.log('beer', $scope.beer);
+	           		console.log('new beer', vm.newBeer);
 	           		// console.log('IBU',$scope.IBU);
 	           		console.log('clicked');
-	               // $modalInstance.close($scope.selected.item);
 	               	$modalInstance.close();
 	            };
 
 	           	function cancel() {
+	           		console.log('beer', vm.newBeer);
+
 	           		console.log('clicked');
 	               	$modalInstance.dismiss('cancel');
 	           	};

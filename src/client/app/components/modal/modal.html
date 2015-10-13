@@ -1,21 +1,21 @@
 <div class="modal-header" >
-  <button type="button" class="close" ng-click="$hide()">&times;</button>
+  <button type="button" class="close" ng-click="vm.cancel()">&times;</button>
   <h4 class="modal-title" ></h4>
 </div>
 <div class="modal-body" >
   <form name="beerForm"> 
     <div class="form-group">
       <label> Beer Name</label>
-      <input type="text" class="form-control" placeholder="beer" ng-model="beer.beerName">
+      <input type="text" class="form-control" placeholder="beer" ng-model="vm.newBeer.beerName">
     </div>
     <div class="form-group">
       <label> IBU</label>
-      <input type="number" class="form-control" placeholder="IBU" ng-model="beer.IBU">
+      <input type="number" class="form-control" placeholder="IBU" ng-model="vm.newBeer.IBU">
     </div>
   </form>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-default" ng-modal="beer.Name"ng-click="modal.ok()">Cancel</button>
-  <button type="button" class="btn btn-danger" ng-modal="beer.IBU" ng-click="modal.cancel()">Confirm</button>
+  <button type="button" class="btn btn-default"  ng-click="vm.ok()">Cancel</button>
+  <button type="button" class="btn btn-danger"  ng-click="vm.cancel()">Confirm</button>
 </div>
    
