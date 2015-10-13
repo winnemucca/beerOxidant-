@@ -6,7 +6,8 @@
 		'beerApp.features.beerStyle', 
 		'beerApp.features.home',
 		'beerApp.features.beerInfo',
-		'beerApp.features.hopsCalculator'
+		'beerApp.features.hopsCalculator',
+		'beerApp.features.beerFlow'
 
 		]);
 })();

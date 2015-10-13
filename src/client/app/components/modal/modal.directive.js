@@ -19,7 +19,7 @@
 		}
 
 		// ModalController.$inject = ['$modal'];
-		function ModalController($modal, $log , $scope, beerListFactory, $stateParams) {
+		function ModalController($modal, $log , beerListFactory, $stateParams) {
 			var vm = this;
 
 			vm.animationsEnabled = true;
@@ -40,16 +40,15 @@
 					// }			
 				});
 				modalInstance.result.then(function(selectedItem) {
-					$log.info('beer in modal',beerListFactory.getBeer($stateParams.beerId) );
+					
 
 					console.log("Confirmed: "+ selectedItem);
-					$scope.selectedItem = selectedItem;
 				}, function() {
 					$log.info('modal dismissed at: ' + new Date());
 				});
 			};
 
-			function ModalInstanceCtrl( $scope,$modalInstance) {
+			function ModalInstanceCtrl( $scope,$modalInstance , $log, beerListFactory) {
 
 				var vm = this;
 			    vm.ok = ok; 
@@ -60,10 +59,12 @@
 			   	// }
 
 			    function ok () {
+
 	           		console.log('new beer', vm.newBeer);
+	           		$log.info('beer in modal',beerListFactory.addBeer($stateParams.beerId) );
 	           		// console.log('IBU',$scope.IBU);
 	           		console.log('clicked');
-	               	$modalInstance.close();
+	               	$modalInstance.close(vm.newBeer);
 	            };
 
 	           	function cancel() {

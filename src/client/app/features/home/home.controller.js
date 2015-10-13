@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('beerApp.features.hopsCalculator')
+		.module('beerApp.features.home')
 		.controller('HomeController', HomeController);
 
 		function HomeController() {

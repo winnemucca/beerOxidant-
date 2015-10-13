@@ -54,13 +54,13 @@
 			function addBeer(beer) {
 				console.log('beer', beer);
 				return $http.post(url,{
-			        data: JSON.stringify({}),
+			        data: JSON.stringify({beer: beer}),
 			        headers: {'Content-Type': 'application/json'}
       			})
       			.then(function(response) {
       				console.log('response', response);
       			}, function(error) {
-      				console.log('Error: ', response);
+      				console.log('Error: ', error);
       			});
 
 				
