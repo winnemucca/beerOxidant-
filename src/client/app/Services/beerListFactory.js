@@ -1,4 +1,5 @@
 (function() {
+	'use strict';
 	angular
 		.module('beerApp.services.beerList',[])
 		.factory('beerListFactory', beerListFactory);
@@ -10,7 +11,8 @@
 
 			return {
 				getBeerList: getBeerList,
-				getBeer: getBeer
+				getBeer: getBeer,
+				addBeer: addBeer
 			}
 
 			function getBeerList(){
@@ -33,7 +35,9 @@
 				return $http.get(url, {
 					catch: true
 				})
-				.then(function(response) {
+				.then(getBeerComplete)
+
+				function getBeerComplete(response) {
 					console.log('promise', id);
 					console.log('response', response.data.length);
 					var data = response.data;
@@ -44,14 +48,20 @@
 	                        return data[i];
 	                    }
                 	}
-				})
-			}
+				} // end of getBeerComplete
+			} //end of getBeer
 
-			function addBeer() {
+			function addBeer(beer) {
+				console.log('beer', beer);
 				return $http.post(url,{
-			        data: JSON.stringify({application:app, from:d1, to:d2}),
+			        data: JSON.stringify({}),
 			        headers: {'Content-Type': 'application/json'}
       			})
+      			.then(function(response) {
+      				console.log('response', response);
+      			}, function(error) {
+      				console.log('Error: ', response);
+      			});
 
 				
 			}
@@ -59,12 +69,5 @@
 })();
 
 
-			// return $http.post(url,{
-			//     headers: { 'Content-Type': 'application/json' },
-			//     data: {application: app, from: d1, to: d2}
-			// });
 
-			// return $http.post(url,{
-		 //        data: JSON.stringify({application:app, from:d1, to:d2}),
-		 //        headers: {'Content-Type': 'application/json'}
-   //    		})
+			
