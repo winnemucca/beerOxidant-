@@ -15,7 +15,7 @@
     "id" : "3",
     "BeerStyle": "American Lager",
     "IBU": "5-15",
-    "list" : {"drinks": ["Blue Paddle"]}
+    "list" : {"drinks": []}
   },
   {
     "id" : "4",

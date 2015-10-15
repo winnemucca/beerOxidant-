@@ -2,14 +2,19 @@
 'use strict';
 var express = require('express');
 var app = express();
-// var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var port = process.env.PORT || 8001;
-// var four0four = require('./utils/404')();
+var four0four = require('./utils/404')();
 
+mongoose.connect('mongodb://localhost/beer');
+
+// models
+var BeerList = require('./models/IBU');
+var Beer = require('./models/beerName');
 
 var environment = process.env.NODE_ENV;
 
@@ -32,6 +37,25 @@ app.use('/app/*', function(req, res, next) {
 });
 // Any deep link calls should return index.html
 app.use('/*', express.static('./src/client/index.html'));
+
+
+app.listen(port, function() {
+    console.log('Express server listening on port ' + port);
+    console.log('env = ' + app.get('env') +
+        '\n__dirname = ' + __dirname  +
+        '\nprocess.cwd = ' + process.cwd());
+});
+
+
+
+
+
+
+
+
+
+
+
 
 // switch (environment){
 //     case 'build':
@@ -57,10 +81,3 @@ app.use('/*', express.static('./src/client/index.html'));
 //         app.use('/*', express.static('./src/client/index.html'));
 //         break;
 // }
-
-app.listen(port, function() {
-    console.log('Express server listening on port ' + port);
-    console.log('env = ' + app.get('env') +
-        '\n__dirname = ' + __dirname  +
-        '\nprocess.cwd = ' + process.cwd());
-});
