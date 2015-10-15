@@ -48,7 +48,7 @@
 				});
 			};
 
-			function ModalInstanceCtrl( $scope,$modalInstance , $log, beerListFactory) {
+			function ModalInstanceCtrl( $scope,$modalInstance , $log, beerListFactory,$http) {
 
 				var vm = this;
 			    vm.ok = ok; 
@@ -61,15 +61,15 @@
 			    function ok () {
 
 	           		console.log('new beer', vm.newBeer);
-	           		$log.info('beer in modal',beerListFactory.addBeer($stateParams.beerId) );
+	           		
+	           		// $log.info('beer in modal',beerListFactory.addBeer($stateParams.beerId) );
 	           		// console.log('IBU',$scope.IBU);
+	           		
 	           		console.log('clicked');
 	               	$modalInstance.close(vm.newBeer);
 	            };
 
 	           	function cancel() {
-	           		console.log('beer', vm.newBeer);
-
 	           		console.log('clicked');
 	               	$modalInstance.dismiss('cancel');
 	           	};
