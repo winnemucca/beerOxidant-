@@ -23,7 +23,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(logger('dev'));
 
-// app.use('/api', require('./routes'));
+//routes 
+//************** fix error **********
+app.use('/api', require('./routes/api'));
+// var apiRoutes = require('./routes/api');
+// app.use('/api',apiRoutes);
+// ********** not liking app.use**********
+
 
 console.log('PORT=' + port);
 console.log('NODE_ENV=' + environment);
